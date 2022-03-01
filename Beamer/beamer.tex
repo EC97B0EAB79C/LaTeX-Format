@@ -1,0 +1,104 @@
+\documentclass[a4paper,11pt]{beamer}
+\useoutertheme{shadow} 
+\usetheme{Berkeley}
+
+\usepackage{times}
+
+\makeatletter
+
+\setbeamertemplate{sidebar \beamer@sidebarside}%{sidebar theme}
+{
+	\beamer@tempdim=\beamer@sidebarwidth%
+	\advance\beamer@tempdim by -6pt%
+	\insertverticalnavigation{\beamer@sidebarwidth}%
+	\vfill
+	\ifx\beamer@sidebarside\beamer@lefttext%
+	\else%
+	\usebeamercolor{normal text}%
+	\llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+	\vskip2pt%
+	\fi%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add page number
+\addtobeamertemplate{navigation symbols}{}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\hspace{1em}%
+	\raisebox{1.2pt}[0pt][0pt]{\insertframenumber/\inserttotalframenumber}
+}
+
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set Title, Author and date 
+\title[Short Title]{Title Page Title}
+\author[Short Author]{Title Page Author}
+\date{1980 02 29}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+	\begingroup
+	\makeatletter
+	\setlength{\hoffset}{-.5\beamer@sidebarwidth}
+	\makeatother
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+	\endgroup
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sections
+\section{Section 1}
+\subsection{Subsection 1}
+\subsubsection{Subsubsection 1-1}
+
+	\begin{frame}{Frame Name}{Frame Subname}
+		When life gives you lemons, don't make lemonade. Make life take the lemons back! Get mad! I don't want your damn lemons, what the heck am I supposed to do with these? Demand to see life's manager! Make life rue the day it thought it could give Cave Johnson lemons! Do you know who I am? I'm the man who's gonna burn your house down! With the lemons! I'm gonna get my engineers to invent a combustible lemon that burns your house down!
+	\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Columns in frame
+\subsection{Subsection 2}
+\subsubsection{Subsubsection 2-1}
+
+	\begin{frame}{Columns}
+		\begin{columns}
+			\begin{column}{.2\textwidth}
+				1st column 0.2 textwidth
+			\end{column}
+			\begin{column}{.3\textwidth}
+				2nd column 0.3 textwidth
+			\end{column}
+			\begin{column}{.5\textwidth}
+				3rd column 0.5 textwidth
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Columns in multiple line
+\subsubsection{Subsubsection 2-2}
+
+	\begin{frame}{Columns}{Columns in multiple line}
+		\begin{columns}
+			\begin{column}{.4\textwidth}
+				a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+			\end{column}
+			\begin{column}{.6\textwidth}
+				b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b
+			\end{column}
+		\end{columns}
+		\vspace{.5cm}
+		\begin{columns}
+			\begin{column}{.6\textwidth}
+				c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
+			\end{column}
+			\begin{column}{.4\textwidth}
+				d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+\end{document}
