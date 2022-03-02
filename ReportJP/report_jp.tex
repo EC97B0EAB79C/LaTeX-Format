@@ -8,18 +8,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Include package to use
 \usepackage{graphicx}
-
+\usepackage{tabularx}
+\usepackage{listings,jvlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title, Author and Date for \maketitle command
-\title{Title}
-\author{Author}
+\title{題目}
+\author{作者}
 \date{\today}
 
 \begin{document}
 	\maketitle
+	
+	ほげ、ふが、ぴよ、ほげら、ほげほげ
+	
 	\begin{figure}[hptb]
 		\centering
 		\includegraphics[width=.1\textwidth]{../example.png}
+		\caption{サンプル画像}
 	\end{figure}
+
+	\begin{table}[hptb]
+		\centering
+		\begin{tabular}{|c|l|}
+			\hline
+			サンプル&表\\\hline
+		\end{tabular}
+	\caption{サンプル表}
+	\end{table}
+	
+	\begin{lstlisting}[caption={サンプルコード}]
+void foobar(){
+	fprintf(stdout,"Bye World");
+}
+	\end{lstlisting}
+
+	
 \end{document}
