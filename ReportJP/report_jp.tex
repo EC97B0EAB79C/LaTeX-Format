@@ -18,10 +18,16 @@
 \date{\today}
 
 \begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create Title in Document
 	\maketitle
-	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Placeholder Text
 	ほげ、ふが、ぴよ、ほげら、ほげほげ
 	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figure, Table's captions are automatically transformed into Japanese
 	\begin{figure}[hptb]
 		\centering
 		\includegraphics[width=.1\textwidth]{../example.png}
@@ -37,6 +43,9 @@
 	\caption{サンプル表}
 	\end{table}
 	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add next line for transforming Listing's captions into Japanese
+	\renewcommand{\lstlistingname}{リスト}
 	\begin{lstlisting}[caption={サンプルコード}]
 void foobar(){
 	fprintf(stdout,"Bye World");
