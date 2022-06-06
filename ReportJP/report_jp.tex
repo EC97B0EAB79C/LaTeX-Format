@@ -1,5 +1,6 @@
-\documentclass[a4paper,10pt,dvipdfmx]{ujarticle}
-% Change ujarticle to jarticle for use in windows
+\documentclass[a4paper,10pt,dvipdfmx]{jarticle}
+% Change to jarticle for use in windows
+% Change to ujarticle for use in linux
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Set page dimensions
@@ -7,15 +8,57 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Include package to use
-\usepackage{graphicx}
-\usepackage{tabularx}
-\usepackage{listings,jvlisting}
+\usepackage{graphicx} 			% including graphics
+\usepackage{tabularx} 			% table
+\usepackage{listings,jvlisting} % adding source code
+\usepackage{color}				% color setting
+
+% Japanese Bookmarks
+\usepackage[dvipdfmx,setpagesize=false]{hyperref}
+\usepackage{pxjahyper}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title, Author and Date for \maketitle command
 \title{題目}
 \author{作者}
 \date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% lstlisting style
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{lime}{rgb}{0.5,0.5,0}
+\definecolor{purple}{rgb}{0.55,0,0.55}
+
+\lstset{
+	language=C++,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	frame={tb},
+	numbers=left,
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	%	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	emph=[1]{
+		override, fun
+	},
+	emphstyle=[1]{\color{blue}},
+	emph=[2]{
+		glColor3d, glVertex2d, 
+	},
+	emphstyle=[2]{\color{lime}}
+	,
+	emph=[3]{
+		binding, \_binding
+	},
+	emphstyle=[3]{\color{purple}}
+}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
